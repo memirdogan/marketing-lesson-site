@@ -7,29 +7,29 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
-            <h3 className="text-2xl font-serif mb-4">C&apos;est La Vie</h3>
+            <h3 className="text-2xl font-serif mb-4">Sunoa</h3>
             <p className="text-gray-400">
-              Premium streetwear showcase featuring luxury brands and exclusive collections.
+              Cildinizi güneşin zararlı etkilerinden koruyan premium güneş kremleri.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/products/new-arrivals" className="text-gray-400 hover:text-white transition-colors">
-                  New Arrivals
+                  Yeni Gelenler
                 </Link>
               </li>
               <li>
                 <Link href="/products/best-sellers" className="text-gray-400 hover:text-white transition-colors">
-                  Best Sellers
+                  En Çok Satanlar
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  All Products
+                  Tüm Ürünler
                 </Link>
               </li>
             </ul>
@@ -37,7 +37,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
+            <h4 className="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
             <div className="flex space-x-4">
               <a
                 href="https://instagram.com"
@@ -60,7 +60,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} C&apos;est La Vie Wear. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Sunoa. Tüm hakları saklıdır.</p>
         </div>
       </div>
     </footer>

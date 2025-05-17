@@ -2,85 +2,143 @@ import { Product, Brand } from '@/types';
 
 export const brands: Brand[] = [
   {
-    id: 'louis-vuitton',
-    name: 'Louis Vuitton',
-    logo: '/brands/deneme.jpeg'
+    id: 'sunoa-original',
+    name: 'Sunoa Original',
+    logo: '/images/logo/sunoa.png'
   },
   {
-    id: 'dior',
-    name: 'Dior',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Christian_Dior_Logo.svg/2560px-Christian_Dior_Logo.svg.png'
+    id: 'sunoa-premium',
+    name: 'Sunoa Premium',
+    logo: '/images/logo/sunoa.png'
   },
   {
-    id: 'versace',
-    name: 'Versace',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Versace-logo.svg/2560px-Versace-logo.svg.png'
+    id: 'sunoa-kids',
+    name: 'Sunoa Kids',
+    logo: '/images/logo/sunoa.png'
   },
   {
-    id: 'ami',
-    name: 'Ami',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/AMI_Paris_logo.png/800px-AMI_Paris_logo.png'
+    id: 'sunoa-sport',
+    name: 'Sunoa Sport',
+    logo: '/images/logo/sunoa.png'
   }
 ];
 
 export const products: Product[] = [
   {
-    id: 'lv-monogram-hoodie',
-    name: 'lib altı products',
-    brand: 'Louis Vuitton',
-    description: 'Luxurious cotton blend hoodie featuring iconic LV monogram pattern.',
-    price: 1200,
+    id: 'lv-sunscreen-spf50',
+    name: 'Luxury SPF50 Güneş Kremi',
+    brand: 'Sunoa Original',
+    description: 'Yüksek koruma faktörlü lüks güneş kremi, cildi UV ışınlarından korur.',
+    price: 650,
     images: [
-      '/brands/deneme.jpeg',
-      'https://images.unsplash.com/photo-1591047139756-eec307b1a7fb'
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.31 (2).jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.29.jpeg'
     ],
     category: 'new-arrivals',
-    shopierLink: 'https://shopier.com/lv-monogram-hoodie',
-    featured: true,
+    shopierLink: 'https://shopier.com/lv-sunscreen',
+    featured: false,
     new: true
   },
   {
-    id: 'dior-oblique-jacket',
-    name: 'Oblique Pattern Jacket',
-    brand: 'Dior',
-    description: 'Premium jacket with all-over Dior Oblique pattern.',
-    price: 2300,
+    id: 'dior-sunscreen-face',
+    name: 'Yüz İçin Güneş Kremi',
+    brand: 'Sunoa Premium',
+    description: 'Yüz cildi için özel formüllü, ince dokulu güneş koruyucu.',
+    price: 580,
     images: [
-      'https://images.unsplash.com/photo-1551028719-00167b16eac5',
-      'https://images.unsplash.com/photo-1551028719-8f2b3fada5c8'
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30.jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (1).jpeg'
     ],
     category: 'best-sellers',
-    shopierLink: 'https://shopier.com/dior-oblique-jacket',
+    shopierLink: 'https://shopier.com/dior-sunscreen',
     featured: true
   },
   {
-    id: 'versace-silk-shirt',
-    name: 'Baroque Print Silk Shirt',
-    brand: 'Versace',
-    description: 'Luxurious silk shirt featuring iconic Versace Baroque print.',
-    price: 1150,
-    images: [
-      'https://images.unsplash.com/photo-1578681994506-b8f463449011',
-      'https://images.unsplash.com/photo-1578681994680-d88fb1c3f612'
-    ],
-    category: 'new-arrivals',
-    shopierLink: 'https://shopier.com/versace-silk-shirt',
-    featured: true,
-    new: true
-  },
-  {
-    id: 'ami-de-coeur-sweater',
-    name: 'De Coeur Wool Sweater',
-    brand: 'Ami',
-    description: 'Classic wool sweater with embroidered Ami de Coeur logo.',
+    id: 'versace-sunscreen-spray',
+    name: 'Sprey Güneş Koruyucu',
+    brand: 'Sunoa Premium',
+    description: 'Kolay uygulanan sprey formülüyle etkili güneş koruması.',
     price: 450,
     images: [
-      'https://images.unsplash.com/photo-1434389677669-e08b4cac3105',
-      'https://images.unsplash.com/photo-1434389677669-e08b4cac3105'
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (2).jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (3).jpeg'
+    ],
+    category: 'trending',
+    shopierLink: 'https://shopier.com/versace-sunscreen',
+    featured: false
+  },
+  {
+    id: 'ami-sunscreen-kids',
+    name: 'Çocuklar İçin Güneş Kremi',
+    brand: 'Sunoa Kids',
+    description: 'Hassas ciltler için özel formüllü, suya dayanıklı güneş koruyucu.',
+    price: 380,
+    images: [
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (4).jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.31.jpeg'
     ],
     category: 'best-sellers',
-    shopierLink: 'https://shopier.com/ami-de-coeur-sweater',
+    shopierLink: 'https://shopier.com/ami-sunscreen',
+    featured: true,
+    new: true
+  },
+  {
+    id: 'lv-sunscreen-aftersun',
+    name: 'After Sun Nemlendirici',
+    brand: 'Sunoa Original',
+    description: 'Güneş sonrası cildi yatıştıran ve nemlendiren bakım kremi.',
+    price: 420,
+    images: [
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.29.jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30.jpeg'
+    ],
+    category: 'new-arrivals',
+    shopierLink: 'https://shopier.com/lv-aftersun',
+    featured: true,
+    new: true
+  },
+  {
+    id: 'dior-sunscreen-tinted',
+    name: 'Renkli Güneş Koruyucu',
+    brand: 'Sunoa Premium',
+    description: 'Hafif ton veren, makyaj bazı olarak da kullanılabilen güneş kremi.',
+    price: 620,
+    images: [
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (1).jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (2).jpeg'
+    ],
+    category: 'trending',
+    shopierLink: 'https://shopier.com/dior-tinted-sunscreen',
     featured: true
+  },
+  {
+    id: 'versace-sunscreen-body',
+    name: 'Vücut İçin Güneş Kremi',
+    brand: 'Sunoa Original',
+    description: 'Tüm vücut için zengin içerikli, uzun süre koruma sağlayan güneş kremi.',
+    price: 550,
+    images: [
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (3).jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.30 (4).jpeg'
+    ],
+    category: 'best-sellers',
+    shopierLink: 'https://shopier.com/versace-body-sunscreen',
+    featured: true
+  },
+  {
+    id: 'ami-sunscreen-sport',
+    name: 'Sporcu Güneş Koruyucu',
+    brand: 'Sunoa Sport',
+    description: 'Terlemeye ve suya dayanıklı, aktif yaşam için özel formüllü güneş kremi.',
+    price: 480,
+    images: [
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.31.jpeg',
+      '/images/product-images/WhatsApp Image 2025-05-16 at 17.24.31 (1).jpeg'
+    ],
+    category: 'trending',
+    shopierLink: 'https://shopier.com/ami-sport-sunscreen',
+    featured: true,
+    new: true
   }
 ];
 
@@ -94,7 +152,7 @@ export const getNewArrivals = (): Product[] => {
 
 export const getProductsByCategory = (category: string): Product[] => {
   if (category === 'all') return products;
-  return products.filter(product => product.category === category);
+  return products.filter(product => product.category === category || product.category === 'all');
 };
 
 export const getProductById = (id: string): Product | undefined => {

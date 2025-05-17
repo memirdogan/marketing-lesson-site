@@ -19,7 +19,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
         {product.new && (
           <div className="absolute top-2 right-2 bg-black text-white px-2 py-1 text-xs font-medium rounded">
-            New
+            Yeni
           </div>
         )}
       </div>
@@ -32,16 +32,13 @@ const ProductCard = ({ product }: ProductCardProps) => {
           </h3>
           <p className="mt-1 text-sm text-gray-500">{product.brand}</p>
         </div>
-        <p className="text-sm font-medium text-gray-900">${product.price}</p>
+        <p className="text-sm font-medium text-gray-900">{product.price} TL</p>
       </div>
-      <a
-        href={product.shopierLink}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
         className="mt-4 block w-full bg-black text-white text-center py-2 px-4 rounded-md hover:bg-gray-800 transition-colors"
       >
-        Shop on Shopier
-      </a>
+        Satın Al
+      </button>
     </div>
   );
 };

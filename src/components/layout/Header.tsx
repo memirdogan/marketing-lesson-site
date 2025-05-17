@@ -7,10 +7,10 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'New Arrivals', href: '/products/new-arrivals' },
-    { name: 'Best Sellers', href: '/products/best-sellers' },
-    { name: 'All Products', href: '/products' },
+    { name: 'Ana Sayfa', href: '/' },
+    { name: 'Yeni Gelenler', href: '/products/new-arrivals' },
+    { name: 'En Çok Satanlar', href: '/products/best-sellers' },
+    { name: 'Tüm Ürünler', href: '/products' },
   ];
 
   return (
@@ -18,8 +18,8 @@ const Header = () => {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-serif font-bold">
-              C&apos;est La Vie
+            <Link href="/" className="flex items-center">
+              <img src="/images/logo/sunoa.png" alt="Sunoa Logo" className="h-28 w-auto -my-6" />
             </Link>
           </div>
 
