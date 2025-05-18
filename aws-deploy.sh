@@ -3,7 +3,7 @@
 # AWS S3 statik web sitesi dağıtım script'i
 
 # Değişkenleri ayarlayın
-BUCKET_NAME="cestlawear-website"
+BUCKET_NAME="sunoa-website"
 REGION="eu-central-1"  # Bölgenizi buraya yazın
 
 # Projeyi build et
