@@ -9,6 +9,9 @@ export default function Home() {
 
   // Yeni ürünleri ve diğer öne çıkan ürünleri birleştir
   const displayProducts = [...newProducts, ...featuredProducts].slice(0, 6);
+  
+  // GitHub Pages için basePath değişkenini tanımla
+  const basePath = process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website' : '';
 
   return (
     <div>
@@ -16,7 +19,7 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/background/May 17, 2025, 12_45_17 PM.png"
+            src={`${basePath}/images/background/May 17, 2025, 12_45_17 PM.png`}
             alt="Hero background"
             fill
             className="object-cover"
@@ -32,7 +35,7 @@ export default function Home() {
             Cildinizi güneşin zararlı etkilerinden koruyan premium güneş kremleri
           </p>
           <Link
-            href="/products"
+            href={`${basePath}/products`}
             className="inline-block bg-white text-black px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
           >
             Koleksiyonu Keşfet
@@ -51,7 +54,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-12">
             <a
-              href="/products"
+              href={`${basePath}/products`}
               className="inline-block border border-black text-black px-8 py-3 rounded-md hover:bg-black hover:text-white transition-colors"
             >
               Tüm Ürünleri Gör

@@ -34,7 +34,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-sunscreen-face-cream-spf50-plus.jpeg'
     ],
     category: 'new-arrivals',
-    shopierLink: '', // https://shopier.com/sunoa-face-cream
+    shopierLink: '',
     featured: true,
     new: true
   },
@@ -48,7 +48,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-sunscreen-face-mist-spf30.jpeg'
     ],
     category: 'best-sellers',
-    shopierLink: '', // https://shopier.com/sunoa-face-mist
+    shopierLink: '',
     featured: true
   },
   {
@@ -61,7 +61,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-sunscreen-body-spray-spf30.jpeg'
     ],
     category: 'trending',
-    shopierLink: '', // https://shopier.com/sunoa-body-spray
+    shopierLink: '',
     featured: true
   },
   {
@@ -74,7 +74,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-sunscreen-for-kids-spf50-plus.jpeg'
     ],
     category: 'best-sellers',
-    shopierLink: '', // https://shopier.com/sunoa-kids
+    shopierLink: '',
     featured: true,
     new: true
   },
@@ -88,7 +88,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-after-run-soothing-lotion.jpeg'
     ],
     category: 'new-arrivals',
-    shopierLink: '', // https://shopier.com/sunoa-after-sun
+    shopierLink: '',
     featured: true,
     new: true
   },
@@ -102,7 +102,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-tinted-sunscreen-spf50.jpeg'
     ],
     category: 'trending',
-    shopierLink: '', // https://shopier.com/sunoa-tinted
+    shopierLink: '',
     featured: true
   },
   {
@@ -115,7 +115,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-bronzlastırıcı-gunes-yagi-spf15.jpeg'
     ],
     category: 'best-sellers',
-    shopierLink: '', // https://shopier.com/sunoa-bronzlastirici
+    shopierLink: '',
     featured: true
   },
   {
@@ -128,7 +128,7 @@ export const products: Product[] = [
       '/images/product-images/sunoa-lip-protect-balm-spf30.jpeg'
     ],
     category: 'trending',
-    shopierLink: '', // https://shopier.com/sunoa-lip-balm
+    shopierLink: '',
     featured: true,
     new: true
   }

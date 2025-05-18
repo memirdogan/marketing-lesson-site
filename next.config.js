@@ -2,20 +2,18 @@
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'upload.wikimedia.org'],
-    unoptimized: true, // S3 için gerekli
+    unoptimized: true,
   },
-  output: 'export', // Statik HTML export için
+  output: 'export',
   typescript: {
-    // !! UYARI !!
-    // TypeScript hatalarını görmezden gel
     ignoreBuildErrors: true,
   },
-  trailingSlash: true, // URL sonlarında slash olmasını sağlar (S3 için gerekli)
+  trailingSlash: true,
   eslint: {
-    ignoreDuringBuilds: true, // ESLint hatalarını build sırasında görmezden gel
+    ignoreDuringBuilds: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website/' : '',
+  basePath: '',
+  assetPrefix: '',
 };
 
 module.exports = nextConfig;

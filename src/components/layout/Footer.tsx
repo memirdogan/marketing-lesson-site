@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
 const Footer = () => {
+  // GitHub Pages için basePath değişkenini tanımla
+  const basePath = process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website' : '';
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -18,17 +21,17 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/products/new-arrivals/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={`${basePath}/products/new-arrivals/`} className="text-gray-400 hover:text-white transition-colors">
                   Yeni Gelenler
                 </Link>
               </li>
               <li>
-                <Link href="/products/best-sellers/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={`${basePath}/products/best-sellers/`} className="text-gray-400 hover:text-white transition-colors">
                   En Çok Satanlar
                 </Link>
               </li>
               <li>
-                <Link href="/products/all/" className="text-gray-400 hover:text-white transition-colors">
+                <Link href={`${basePath}/products/all/`} className="text-gray-400 hover:text-white transition-colors">
                   Tüm Ürünler
                 </Link>
               </li>

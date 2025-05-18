@@ -7,11 +7,14 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ product }: ProductCardProps) => {
+  // GitHub Pages için basePath değişkenini tanımla
+  const basePath = process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website' : '';
+  
   return (
     <div className="group relative">
       <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-100">
         <Image
-          src={product.images[0]}
+          src={`${basePath}${product.images[0]}`}
           alt={product.name}
           width={500}
           height={500}
@@ -26,7 +29,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       <div className="mt-4 flex justify-between">
         <div>
           <h3 className="text-sm text-gray-700">
-            <Link href={`/products/${product.id}`} className="hover:underline">
+            <Link href={`${basePath}/products/${product.id}`} className="hover:underline">
               {product.name}
             </Link>
           </h3>
