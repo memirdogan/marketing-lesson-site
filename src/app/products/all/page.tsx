@@ -1,11 +1,11 @@
 'use client';
 import { useEffect } from 'react';
 
-export default function TrendingPage() {
+export default function AllProductsPage() {
   useEffect(() => {
     // Global değişkeni ayarla ve localStorage'a da kaydet
-    window.INITIAL_CATEGORY = 'trending';
-    localStorage.setItem('selectedCategory', 'trending');
+    window.INITIAL_CATEGORY = 'all';
+    localStorage.removeItem('selectedCategory');
     
     // Products sayfasına yönlendir
     window.location.href = '/products/';

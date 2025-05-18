@@ -18,17 +18,17 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Hızlı Bağlantılar</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/products/new-arrivals" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/products/new-arrivals/" className="text-gray-400 hover:text-white transition-colors">
                   Yeni Gelenler
                 </Link>
               </li>
               <li>
-                <Link href="/products/best-sellers" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/products/best-sellers/" className="text-gray-400 hover:text-white transition-colors">
                   En Çok Satanlar
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="/products/all/" className="text-gray-400 hover:text-white transition-colors">
                   Tüm Ürünler
                 </Link>
               </li>

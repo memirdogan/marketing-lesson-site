@@ -10,7 +10,7 @@ const nextConfig = {
     // TypeScript hatalarını görmezden gel
     ignoreBuildErrors: true,
   },
-  trailingSlash: false, // URL sonlarında slash olmamasını sağlar
+  trailingSlash: true, // URL sonlarında slash olmasını sağlar (S3 için gerekli)
   eslint: {
     ignoreDuringBuilds: true, // ESLint hatalarını build sırasında görmezden gel
   },

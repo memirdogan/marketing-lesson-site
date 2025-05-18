@@ -4,21 +4,50 @@ import { useState, useEffect } from 'react';
 import ProductCard from '@/components/product/ProductCard';
 import { products } from '@/lib/products';
 
+// Global değişken için TypeScript tanımı
+declare global {
+  interface Window {
+    INITIAL_CATEGORY?: string;
+  }
+}
+
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [isLoading, setIsLoading] = useState(true);
+  const [displayProducts, setDisplayProducts] = useState(products);
   
-  // URL'den kategori parametresini al
+  // Sayfa yüklendiğinde kategori seçimini yap
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-    if (category) {
-      setSelectedCategory(category);
-    } else {
-      setSelectedCategory('all');
+    // Öncelikle global değişkeni kontrol et
+    if (window.INITIAL_CATEGORY) {
+      applyCategory(window.INITIAL_CATEGORY);
+      window.INITIAL_CATEGORY = undefined; // Bir kez kullan ve temizle
+    } 
+    // Sonra localStorage'ı kontrol et
+    else {
+      const savedCategory = localStorage.getItem('selectedCategory');
+      if (savedCategory) {
+        applyCategory(savedCategory);
+      } else {
+        // Hiçbir kategori seçilmemişse tüm ürünleri göster
+        applyCategory('all');
+      }
     }
+    
     setIsLoading(false);
   }, []);
+
+  // Kategori uygulama fonksiyonu
+  const applyCategory = (category: string) => {
+    setSelectedCategory(category);
+    
+    if (category === 'all') {
+      setDisplayProducts(products);
+    } else {
+      const filtered = products.filter(product => product.category === category);
+      setDisplayProducts(filtered);
+    }
+  };
 
   const categories = ['all', 'new-arrivals', 'best-sellers', 'trending'];
   const categoryNames: Record<string, string> = {
@@ -28,18 +57,21 @@ export default function ProductsPage() {
     'trending': 'Trend Olanlar'
   };
 
-  const filteredProducts = selectedCategory === 'all'
-    ? products
-    : products.filter(product => product.category === selectedCategory);
-
-  // Kategori değiştiğinde URL'yi güncelle
+  // Kategori değiştiğinde URL'yi güncelle ve ürünleri filtrele
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category);
+    applyCategory(category);
+    
+    // localStorage'a kaydet
+    if (category === 'all') {
+      localStorage.removeItem('selectedCategory');
+    } else {
+      localStorage.setItem('selectedCategory', category);
+    }
     
     // URL'yi güncelle
     const url = category === 'all' 
-      ? '/products' 
-      : `/products?category=${category}`;
+      ? '/products/all/' 
+      : `/products/${category}/`;
       
     window.history.pushState({}, '', url);
   };
@@ -98,13 +130,13 @@ export default function ProductsPage() {
 
       {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {filteredProducts.map((product) => (
+        {displayProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
       {/* Empty State */}
-      {filteredProducts.length === 0 && (
+      {displayProducts.length === 0 && (
         <div className="text-center py-16">
           <h3 className="text-lg font-medium text-gray-900">Ürün bulunamadı</h3>
           <p className="mt-1 text-gray-500">

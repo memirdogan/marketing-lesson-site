@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -9,9 +8,9 @@ const Header = () => {
 
   const navigation = [
     { name: 'Ana Sayfa', href: '/' },
-    { name: 'Yeni Gelenler', href: '/products?category=new-arrivals' },
-    { name: 'En Çok Satanlar', href: '/products?category=best-sellers' },
-    { name: 'Tüm Ürünler', href: '/products' },
+    { name: 'Yeni Gelenler', href: '/products/new-arrivals/' },
+    { name: 'En Çok Satanlar', href: '/products/best-sellers/' },
+    { name: 'Tüm Ürünler', href: '/products/all/' },
   ];
 
   return (
@@ -31,13 +30,6 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium transition-colors"
-                onClick={(e) => {
-                  // Eğer zaten products sayfasındaysak ve kategori değiştiriyorsak
-                  if (window.location.pathname === '/products' && item.href.includes('?category=')) {
-                    e.preventDefault();
-                    window.location.href = item.href;
-                  }
-                }}
               >
                 {item.name}
               </a>
@@ -74,14 +66,7 @@ const Header = () => {
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md"
-                  onClick={(e) => {
-                    setIsMenuOpen(false);
-                    // Eğer zaten products sayfasındaysak ve kategori değiştiriyorsak
-                    if (window.location.pathname === '/products' && item.href.includes('?category=')) {
-                      e.preventDefault();
-                      window.location.href = item.href;
-                    }
-                  }}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
