@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 const Header = () => {
@@ -19,7 +20,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img src="/images/logo/sunoa.png" alt="Sunoa Logo" className="h-28 w-auto -my-6" />
+              <Image src="/images/logo/sunoa.png" alt="Sunoa Logo" width={112} height={112} className="-my-6" />
             </Link>
           </div>
 
@@ -79,4 +80,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

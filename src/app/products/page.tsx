@@ -8,7 +8,7 @@ export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = ['all', 'new-arrivals', 'best-sellers', 'trending'];
-  const categoryNames = {
+  const categoryNames: Record<string, string> = {
     'all': 'Tümü',
     'new-arrivals': 'Yeni Gelenler',
     'best-sellers': 'En Çok Satanlar',
