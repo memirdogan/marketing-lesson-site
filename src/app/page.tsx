@@ -50,12 +50,12 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link
+            <a
               href="/products"
               className="inline-block border border-black text-black px-8 py-3 rounded-md hover:bg-black hover:text-white transition-colors"
             >
               Tüm Ürünleri Gör
-            </Link>
+            </a>
           </div>
         </div>
       </section>

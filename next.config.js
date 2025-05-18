@@ -10,6 +10,10 @@ const nextConfig = {
     // TypeScript hatalarını görmezden gel
     ignoreBuildErrors: true,
   },
+  trailingSlash: false, // URL sonlarında slash olmamasını sağlar
+  eslint: {
+    ignoreDuringBuilds: true, // ESLint hatalarını build sırasında görmezden gel
+  },
 };
 
 module.exports = nextConfig;

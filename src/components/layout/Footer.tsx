@@ -40,20 +40,12 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/sunoa_tr?igsh=MWhzcGwzejBtaHBheA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Instagram
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Twitter
               </a>
             </div>
           </div>

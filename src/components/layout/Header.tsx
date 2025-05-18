@@ -9,8 +9,8 @@ const Header = () => {
 
   const navigation = [
     { name: 'Ana Sayfa', href: '/' },
-    { name: 'Yeni Gelenler', href: '/products/new-arrivals' },
-    { name: 'En Çok Satanlar', href: '/products/best-sellers' },
+    { name: 'Yeni Gelenler', href: '/products?category=new-arrivals' },
+    { name: 'En Çok Satanlar', href: '/products?category=best-sellers' },
     { name: 'Tüm Ürünler', href: '/products' },
   ];
 
@@ -19,21 +19,28 @@ const Header = () => {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
-              <Image src="/images/logo/sunoa.png" alt="Sunoa Logo" width={112} height={112} className="-my-6" />
-            </Link>
+            <a href="/" className="flex items-center">
+              <Image src="/images/logo/sunoa.png" alt="Sunoa Logo" width={112} height={112} className="-my-6" priority />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:space-x-8">
             {navigation.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className="text-gray-900 hover:text-gray-600 px-3 py-2 text-sm font-medium transition-colors"
+                onClick={(e) => {
+                  // Eğer zaten products sayfasındaysak ve kategori değiştiriyorsak
+                  if (window.location.pathname === '/products' && item.href.includes('?category=')) {
+                    e.preventDefault();
+                    window.location.href = item.href;
+                  }
+                }}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -63,14 +70,21 @@ const Header = () => {
           <div className="md:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-base font-medium text-gray-900 hover:bg-gray-50 rounded-md"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    setIsMenuOpen(false);
+                    // Eğer zaten products sayfasındaysak ve kategori değiştiriyorsak
+                    if (window.location.pathname === '/products' && item.href.includes('?category=')) {
+                      e.preventDefault();
+                      window.location.href = item.href;
+                    }
+                  }}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
