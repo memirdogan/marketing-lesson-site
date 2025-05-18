@@ -14,6 +14,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true, // ESLint hatalarını build sırasında görmezden gel
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/sunoa-ecommerce-website/' : '',
 };
 
 module.exports = nextConfig;
