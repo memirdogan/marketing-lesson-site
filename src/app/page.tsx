@@ -16,7 +16,7 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/background/May 17, 2025, 12_45_17 PM.png"
+            src="/images/background/sahil-bg.png"
             alt="Hero background"
             fill
             className="object-cover"
@@ -61,7 +61,7 @@ export default function Home() {
       </section>
 
       {/* Brand Showcase */}
-      <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-serif mb-12">Sunoa Ürün Serileri</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -73,6 +73,52 @@ export default function Home() {
                 <span className="text-xl font-serif">{brand.name}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl font-serif mb-8">Bizi Takip Edin</h2>
+          <p className="text-lg text-gray-600 mb-8">Yeni ürünler, kampanyalar ve daha fazlası için sosyal medya hesaplarımızı takip edin.</p>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+            <a 
+              href="https://www.instagram.com/sunoa_tr?igsh=MWhzcGwzejBtaHBheA==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center px-6 py-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              <span className="text-lg font-medium">Instagram</span>
+            </a>
+            
+            <a 
+              href="https://x.com/Sunao_tr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center px-6 py-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              <span className="text-lg font-medium">X (Twitter)</span>
+            </a>
+            
+            <a 
+              href="https://www.tiktok.com/@sunoa_tr" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center px-6 py-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              <span className="text-lg font-medium">TikTok</span>
+            </a>
+            
+            <a 
+              href="https://www.facebook.com/profile.php?id=61576436552224" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center px-6 py-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+            >
+              <span className="text-lg font-medium">Facebook</span>
+            </a>
           </div>
         </div>
       </section>

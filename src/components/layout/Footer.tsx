@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Bizi Takip Edin</h4>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-2">
               <a
                 href="https://www.instagram.com/sunoa_tr?igsh=MWhzcGwzejBtaHBheA=="
                 target="_blank"
@@ -46,6 +46,30 @@ const Footer = () => {
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Instagram
+              </a>
+              <a
+                href="https://x.com/Sunao_tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                X (Twitter)
+              </a>
+              <a
+                href="https://www.tiktok.com/@sunoa_tr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                TikTok
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61576436552224"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Facebook
               </a>
             </div>
           </div>
@@ -59,4 +83,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

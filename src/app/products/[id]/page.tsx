@@ -64,12 +64,13 @@ export default function ProductPage({ params }: PageProps) {
               <li>
                 <span className="mx-2">/</span>
               </li>
-              <li>{product.brand}</li>
+              <li className="font-bold uppercase tracking-wider">{product.brand}</li>
             </ol>
           </nav>
 
           <div className="space-y-6">
             <div>
+              <p className="text-sm font-bold uppercase tracking-wider text-gray-600 mb-1">{product.brand}</p>
               <h1 className="text-3xl font-serif">{product.name}</h1>
               <p className="mt-2 text-xl text-gray-900">{product.price} TL</p>
             </div>
